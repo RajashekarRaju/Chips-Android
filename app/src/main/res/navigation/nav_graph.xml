@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.developersbreach.chips.HomeFragment"
+        android:label="Home Fragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_entryChipFragment"
+            app:destination="@id/entryChipFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_choiceChipFragment"
+            app:destination="@id/choiceChipFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_filterChipFragment"
+            app:destination="@id/filterChipFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_actionChipFragment"
+            app:destination="@id/actionChipFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/entryChipFragment"
+        android:name="com.developersbreach.chips.entryChip.EntryChipFragment"
+        android:label="Entry Chip Fragment"
+        tools:layout="@layout/fragment_entry_chip" />
+
+    <fragment
+        android:id="@+id/choiceChipFragment"
+        android:name="com.developersbreach.chips.choiceChip.ChoiceChipFragment"
+        android:label="Choice Chip Fragment"
+        tools:layout="@layout/fragment_choice_chip" />
+
+    <fragment
+        android:id="@+id/filterChipFragment"
+        android:name="com.developersbreach.chips.filterChip.FilterChipFragment"
+        android:label="Filter Chip Fragment"
+        tools:layout="@layout/fragment_filter_chip" />
+
+    <fragment
+        android:id="@+id/actionChipFragment"
+        android:name="com.developersbreach.chips.actionChip.ActionChipFragment"
+        android:label="Fragment Action Chip"
+        tools:layout="@layout/fragment_action_chip" />
+
+</navigation>
