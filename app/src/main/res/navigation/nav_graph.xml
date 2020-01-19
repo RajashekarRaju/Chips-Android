@@ -23,7 +23,16 @@
         <action
             android:id="@+id/action_homeFragment_to_actionChipFragment"
             app:destination="@id/actionChipFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_materialChipsFragment"
+            app:destination="@id/materialChipsFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/materialChipsFragment"
+        android:name="com.developersbreach.chips.materialChips.MaterialChipsFragment"
+        android:label="Material Chips Fragment"
+        tools:layout="@layout/fragment_material_chips" />
 
     <fragment
         android:id="@+id/entryChipFragment"

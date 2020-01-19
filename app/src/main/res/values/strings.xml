@@ -3,4 +3,15 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="material_chips">Material Chips</string>
+
+    <string name="fragment_entry_chip">Entry Chip</string>
+    <string name="fragment_filter_chip">Filter Chip</string>
+    <string name="fragment_choice_chip">Choice Chip</string>
+    <string name="fragment_action_chip">Action Chip</string>
+    <string name="entry">Entry</string>
+    <string name="filter">Filter</string>
+    <string name="choice">Choice</string>
+    <string name="action">Action</string>
+
 </resources>

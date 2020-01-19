@@ -1,14 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/material_chip_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_view_height_150dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/card_view_radius_6dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/material_chips"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                android:textColor="@color/primaryTextColor" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/entry_chip_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_view_height_150dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/card_view_radius_6dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toBottomOf="@id/material_chip_card_view">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="@dimen/card_tv_marginTop_28dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/fragment_entry_chip"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                android:textColor="@color/primaryTextColor" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height_32dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="@dimen/card_tv_marginBottom_28dp"
+                android:text="@string/entry"
+                android:textColor="@color/secondaryTextColor"
+                app:chipBackgroundColor="@color/colorWhite"
+                app:chipIcon="@drawable/ic_face" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/filter_chip_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_view_height_150dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/card_view_radius_6dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/entry_chip_card_view">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="@dimen/card_tv_marginTop_28dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/fragment_filter_chip"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                android:textColor="@color/primaryTextColor" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height_32dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="@dimen/card_tv_marginBottom_28dp"
+                android:checked="true"
+                android:text="@string/filter"
+                android:textColor="@color/secondaryTextColor"
+                app:chipBackgroundColor="@color/colorWhite" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/choice_chip_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_view_height_150dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/card_view_radius_6dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filter_chip_card_view">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="@dimen/card_tv_marginTop_28dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/fragment_choice_chip"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                android:textColor="@color/primaryTextColor" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height_32dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="@dimen/card_tv_marginBottom_28dp"
+                android:text="@string/choice"
+                android:textColor="@color/secondaryTextColor"
+                app:chipBackgroundColor="@color/colorWhite" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/action_chip_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_view_height_150dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/card_view_radius_6dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choice_chip_card_view">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="@dimen/card_tv_marginTop_28dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/fragment_action_chip"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                android:textColor="@color/primaryTextColor" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height_32dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="@dimen/card_tv_marginBottom_28dp"
+                android:text="@string/action"
+                android:textColor="@color/secondaryTextColor"
+                app:chipBackgroundColor="@color/colorWhite"
+                app:chipIcon="@drawable/ic_face" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
