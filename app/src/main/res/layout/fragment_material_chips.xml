@@ -1,14 +1,319 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".materialChips.MaterialChipsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/outlined_tag"
+            style="@style/chip_tags_tv_style"
+            android:layout_margin="@dimen/layout_margin_16dp"
+            android:text="@string/outlined"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/outlined_chip"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/chip_height_32dp"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/material"
+            android:textColor="@color/colorPrimary"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipIcon="@drawable/ic_face"
+            app:chipStrokeColor="@color/colorPrimary"
+            app:chipStrokeWidth="@dimen/chip_stroke_1dp"
+            app:layout_constraintStart_toStartOf="@id/outlined_tag"
+            app:layout_constraintTop_toBottomOf="@id/outlined_tag" />
+
+        <TextView
+            android:id="@+id/outlined_sharp_tag"
+            style="@style/chip_tags_tv_style"
+            android:text="@string/outlined_sharp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/outlined_tag"
+            app:layout_constraintTop_toTopOf="@id/outlined_tag" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/outlined_sharp_chip"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/chip_height_32dp"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/material"
+            android:textColor="@color/colorPrimary"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipCornerRadius="@dimen/chip_radius_0dp"
+            app:chipIcon="@drawable/ic_face"
+            app:chipStrokeColor="@color/colorPrimary"
+            app:chipStrokeWidth="@dimen/chip_stroke_1dp"
+            app:layout_constraintEnd_toEndOf="@id/outlined_sharp_tag"
+            app:layout_constraintStart_toStartOf="@id/outlined_sharp_tag"
+            app:layout_constraintTop_toBottomOf="@id/outlined_sharp_tag" />
+
+        <View
+            android:id="@+id/divider_1"
+            style="@style/dividerHorizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/outlined_chip" />
+
+        <TextView
+            android:id="@+id/filled_tag"
+            style="@style/chip_tags_tv_style"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/filled"
+            app:layout_constraintStart_toStartOf="@id/outlined_tag"
+            app:layout_constraintTop_toBottomOf="@id/divider_1" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filled_chip"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/chip_height_32dp"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/material"
+            android:textColor="@color/colorWhite"
+            app:chipBackgroundColor="@color/colorPrimary"
+            app:chipIcon="@drawable/ic_face"
+            app:chipIconTint="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="@id/filled_tag"
+            app:layout_constraintTop_toBottomOf="@id/filled_tag" />
+
+        <TextView
+            android:id="@+id/filled_sharp_tag"
+            style="@style/chip_tags_tv_style"
+            android:text="@string/filled_sharp"
+            app:layout_constraintStart_toStartOf="@id/outlined_sharp_tag"
+            app:layout_constraintTop_toTopOf="@id/filled_tag" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filled_sharp_chip"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/chip_height_32dp"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/material"
+            android:textColor="@color/colorWhite"
+            app:chipBackgroundColor="@color/colorPrimary"
+            app:chipCornerRadius="@dimen/chip_radius_0dp"
+            app:chipIcon="@drawable/ic_face"
+            app:chipIconTint="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="@id/filled_sharp_tag"
+            app:layout_constraintStart_toStartOf="@id/filled_sharp_tag"
+            app:layout_constraintTop_toBottomOf="@id/filled_sharp_tag" />
+
+        <View
+            android:id="@+id/divider_2"
+            style="@style/dividerHorizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/filled_chip" />
+
+        <TextView
+            android:id="@+id/entry_chip_group_tag"
+            style="@style/chip_tags_tv_style"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/entry_chip_group"
+            app:layout_constraintStart_toStartOf="@id/outlined_tag"
+            app:layout_constraintTop_toBottomOf="@id/divider_2" />
+
+        <HorizontalScrollView
+            android:id="@+id/entry_chip_group_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_16dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/entry_chip_group_tag">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/entry_chip_group"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height_32dp"
+                app:chipSpacingHorizontal="8dp"
+                app:singleLine="true"
+                app:singleSelection="true" />
+
+        </HorizontalScrollView>
+
+        <View
+            android:id="@+id/divider_3"
+            style="@style/dividerHorizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/entry_chip_group_scroll" />
+
+        <TextView
+            android:id="@+id/choice_chip_group_tag"
+            style="@style/chip_tags_tv_style"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/choice_chip_group"
+            app:layout_constraintStart_toStartOf="@id/outlined_tag"
+            app:layout_constraintTop_toBottomOf="@id/divider_3" />
+
+        <HorizontalScrollView
+            android:id="@+id/choice_chip_group_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_16dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/choice_chip_group_tag">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/choice_chip_group"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height_32dp"
+                app:chipSpacingHorizontal="@dimen/chip_horizontal_spacing"
+                app:singleLine="true"
+                app:singleSelection="true" />
+
+        </HorizontalScrollView>
+
+        <View
+            android:id="@+id/divider4"
+            style="@style/dividerHorizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/choice_chip_group_scroll" />
+
+        <TextView
+            android:id="@+id/filter_chip_group_tag"
+            style="@style/chip_tags_tv_style"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/filter_chip_group"
+            app:layout_constraintStart_toStartOf="@id/outlined_tag"
+            app:layout_constraintTop_toBottomOf="@id/divider4" />
+
+        <HorizontalScrollView
+            android:id="@+id/filter_chip_group_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_16dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/filter_chip_group_tag">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/filter_chip_group"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height_32dp"
+                app:chipSpacingHorizontal="@dimen/chip_horizontal_spacing"
+                app:singleLine="true"
+                app:singleSelection="true" />
+
+        </HorizontalScrollView>
+
+        <View
+            android:id="@+id/divider_5"
+            style="@style/dividerHorizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/filter_chip_group_scroll" />
+
+        <TextView
+            android:id="@+id/action_chip_group_tag"
+            style="@style/chip_tags_tv_style"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/action_chip_group"
+            app:layout_constraintStart_toStartOf="@id/outlined_tag"
+            app:layout_constraintTop_toBottomOf="@id/divider_5" />
+
+        <HorizontalScrollView
+            android:id="@+id/action_chip_group_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_16dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/action_chip_group_tag">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/action_chip_group"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height_32dp"
+                app:chipSpacingHorizontal="@dimen/chip_horizontal_spacing"
+                app:singleLine="true" />
+
+        </HorizontalScrollView>
+
+        <View
+            android:id="@+id/divider_6"
+            style="@style/dividerHorizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/action_chip_group_scroll" />
+
+        <TextView
+            android:id="@+id/outlined_rounded_tag"
+            style="@style/chip_tags_tv_style"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/outlined_rounded"
+            app:layout_constraintStart_toStartOf="@id/outlined_tag"
+            app:layout_constraintTop_toTopOf="@id/divider_6" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/outlined_rounded_chip"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/chip_height_32dp"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/Eight"
+            android:textColor="@color/colorPrimary"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipCornerRadius="@dimen/chip_radius_8dp"
+            app:chipStrokeColor="@color/colorPrimary"
+            app:chipStrokeWidth="@dimen/chip_stroke_1dp"
+            app:layout_constraintStart_toStartOf="@id/outlined_rounded_tag"
+            app:layout_constraintTop_toBottomOf="@id/outlined_rounded_tag" />
+
+        <TextView
+            android:id="@+id/filled_rounded_tag"
+            style="@style/chip_tags_tv_style"
+            android:layout_marginEnd="@dimen/layout_margin_16dp"
+            android:text="@string/filled_rounded"
+            app:layout_constraintStart_toStartOf="@id/outlined_sharp_tag"
+            app:layout_constraintTop_toTopOf="@id/outlined_rounded_tag" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filled_rounded_chip"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/chip_height_32dp"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/Eight"
+            android:textColor="@color/colorWhite"
+            app:chipBackgroundColor="@color/colorPrimary"
+            app:chipCornerRadius="@dimen/chip_radius_8dp"
+            app:layout_constraintStart_toStartOf="@id/filled_rounded_tag"
+            app:layout_constraintTop_toBottomOf="@id/filled_rounded_tag" />
+
+        <TextView
+            android:id="@+id/custom_chip_tag"
+            style="@style/chip_tags_tv_style"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:text="@string/custom_chip"
+            app:layout_constraintStart_toStartOf="@id/outlined_tag"
+            app:layout_constraintTop_toBottomOf="@id/outlined_rounded_chip" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_16dp"
+            android:layout_marginBottom="@dimen/layout_margin_16dp"
+            android:text="@string/material"
+            android:textColor="@color/colorPrimaryDark"
+            app:chipBackgroundColor="@color/colorBackground"
+            app:chipStrokeColor="@color/colorPrimaryDark"
+            app:chipStrokeWidth="@dimen/chip_stroke_1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/custom_chip_tag"
+            app:layout_constraintTop_toBottomOf="@id/custom_chip_tag" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

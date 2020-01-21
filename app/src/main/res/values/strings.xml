@@ -1,10 +1,6 @@
 <resources>
     <string name="app_name">Chips</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="material_chips">Material Chips</string>
-
     <string name="fragment_entry_chip">Entry Chip</string>
     <string name="fragment_filter_chip">Filter Chip</string>
     <string name="fragment_choice_chip">Choice Chip</string>
@@ -13,5 +9,17 @@
     <string name="filter">Filter</string>
     <string name="choice">Choice</string>
     <string name="action">Action</string>
-
+    <string name="outlined">Outlined</string>
+    <string name="material">Material</string>
+    <string name="filled">Filled</string>
+    <string name="outlined_sharp">Sharp Edges</string>
+    <string name="filled_sharp">Filled Sharp</string>
+    <string name="filled_rounded">Rounded</string>
+    <string name="Eight">8</string>
+    <string name="outlined_rounded">Rounded</string>
+    <string name="entry_chip_group">Entry ChipGroup</string>
+    <string name="choice_chip_group">Choice ChipGroup</string>
+    <string name="filter_chip_group">Filter ChipGroup</string>
+    <string name="action_chip_group">Action ChipGroup</string>
+    <string name="custom_chip">Custom Chip</string>
 </resources>

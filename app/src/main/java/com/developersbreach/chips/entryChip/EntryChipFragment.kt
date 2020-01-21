@@ -11,10 +11,6 @@ import com.developersbreach.chips.R
 
 class EntryChipFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = EntryChipFragment()
-    }
-
     private lateinit var viewModel: EntryChipFragmentViewModel
 
     override fun onCreateView(
@@ -27,7 +23,6 @@ class EntryChipFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(EntryChipFragmentViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
 }

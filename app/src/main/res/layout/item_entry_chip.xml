@@ -1,0 +1,11 @@
+<com.google.android.material.chip.Chip
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.MaterialComponents.Chip.Entry"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/chip_height_32dp"
+    android:text="@string/entry"
+    android:textColor="@color/colorWhite"
+    app:chipBackgroundColor="@color/colorPrimary"
+    app:chipIcon="@drawable/ic_face"
+    app:closeIconTint="@color/colorWhite" />

@@ -5,8 +5,13 @@
     <dimen name="card_tv_marginTop_28dp">28dp</dimen>
     <dimen name="chip_height_32dp">32dp</dimen>
     <dimen name="card_tv_marginBottom_28dp">28dp</dimen>
-    <dimen name="chip_icon_size_24dp">24dp</dimen>
-    <dimen name="chip_text_size_14sp">14sp</dimen>
-    <dimen name="chip_start_padding_12dp">12dp</dimen>
-    <dimen name="chip_end_padding_12dp">12dp</dimen>
+    <dimen name="layout_margin_16dp">16dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="chip_stroke_1dp">1dp</dimen>
+    <dimen name="chip_radius_0dp">0dp</dimen>
+    <dimen name="chip_horizontal_spacing">8dp</dimen>
+    <dimen name="chip_radius_8dp">8dp</dimen>
+    <dimen name="chip_start_padding_4dp">4dp</dimen>
+    <dimen name="chip_icon_padding_4dp">4dp</dimen>
+    <dimen name="chip_padding_12dp">12dp</dimen>
 </resources>

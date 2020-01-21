@@ -11,10 +11,6 @@ import com.developersbreach.chips.R
 
 class ActionChipFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = ActionChipFragment()
-    }
-
     private lateinit var viewModel: ActionChipFragmentViewModel
 
     override fun onCreateView(
@@ -27,7 +23,6 @@ class ActionChipFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(ActionChipFragmentViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
 }

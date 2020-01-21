@@ -31,31 +31,31 @@
     <fragment
         android:id="@+id/materialChipsFragment"
         android:name="com.developersbreach.chips.materialChips.MaterialChipsFragment"
-        android:label="Material Chips Fragment"
+        android:label="Material Chips"
         tools:layout="@layout/fragment_material_chips" />
 
     <fragment
         android:id="@+id/entryChipFragment"
         android:name="com.developersbreach.chips.entryChip.EntryChipFragment"
-        android:label="Entry Chip Fragment"
+        android:label="Entry Chips"
         tools:layout="@layout/fragment_entry_chip" />
 
     <fragment
         android:id="@+id/choiceChipFragment"
         android:name="com.developersbreach.chips.choiceChip.ChoiceChipFragment"
-        android:label="Choice Chip Fragment"
+        android:label="Choice Chips"
         tools:layout="@layout/fragment_choice_chip" />
 
     <fragment
         android:id="@+id/filterChipFragment"
         android:name="com.developersbreach.chips.filterChip.FilterChipFragment"
-        android:label="Filter Chip Fragment"
+        android:label="Filter Chips"
         tools:layout="@layout/fragment_filter_chip" />
 
     <fragment
         android:id="@+id/actionChipFragment"
         android:name="com.developersbreach.chips.actionChip.ActionChipFragment"
-        android:label="Fragment Action Chip"
+        android:label="Fragment Actions"
         tools:layout="@layout/fragment_action_chip" />
 
 </navigation>

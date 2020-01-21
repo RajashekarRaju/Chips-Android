@@ -9,7 +9,7 @@
     <color name="primaryTextColor">#e0e0e0</color>
     <color name="secondaryTextColor">#47213e</color>
     <color name="colorIcons">#FFFFFF</color>
-    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorDivider">#e0e0e0</color>
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#FFFFFF</color>
 </resources>
