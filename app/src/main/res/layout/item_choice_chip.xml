@@ -4,9 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/Widget.MaterialComponents.Chip.Choice"
     android:layout_width="wrap_content"
-    android:layout_height="@dimen/chip_height_32dp"
+    android:layout_height="wrap_content"
     android:text="@string/choice"
     android:textColor="@color/colorPrimary"
-    app:chipBackgroundColor="@android:color/transparent"
+    app:chipBackgroundColor="@color/choice_selected_highlight"
     app:chipStrokeColor="@color/colorPrimary"
+    app:chipEndPadding="12dp"
+    app:chipStartPadding="12dp"
     app:chipStrokeWidth="1dp" />

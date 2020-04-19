@@ -2,16 +2,16 @@ package com.developersbreach.chips.materialChips
 
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-
 import com.developersbreach.chips.R
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
+import com.google.android.material.snackbar.Snackbar
 
 /**
  * A simple [Fragment] subclass.
@@ -105,6 +105,13 @@ class MaterialChipsFragment : Fragment() {
         chipGroup.removeAllViews()
         for (currentChip in chipList) {
             chipGroup.addView(currentChip)
+        }
+
+        chipGroup.setOnCheckedChangeListener { group, checkedId ->
+            val chip: Chip = group.findViewById(checkedId)
+            if (chip.isChecked) {
+                Snackbar.make(view!!, chip.text, Snackbar.LENGTH_SHORT).show()
+            }
         }
     }
 
